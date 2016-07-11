@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 3000;
 
 
-mongoose.connect('mongodb://bears:bears@ds031892.mlab.com:31892/bears');
+mongoose.connect('connection url goes here');
 
 
 
