@@ -1,0 +1,5 @@
+/.idea/*
+/config/local.json
+/node_modules/*
+/public/*
+/logs/*
