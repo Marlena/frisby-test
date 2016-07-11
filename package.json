@@ -16,6 +16,7 @@
     "mongoose": "^4.5.1"
   },
   "devDependencies": {
+    "foreman": "^1.4.1",
     "frisby": "^0.8.5",
     "gulp-sass": "^2.3.2"
   }

@@ -17,16 +17,17 @@ gulp.task('watch', () => {
   gulp.watch('app/scss/**/*.scss', ['sass'])
 });
 
-gulp.task('server', (callback) => {
-  spawn('node server.js', (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    callback(err);
-  });
+
+gulp.task('server', () => {
+  spawn('node', ['server.js'])
+});
+
+gulp.task('spawn-spec', (callback) => {
+  spawn('./node_modules/jasmine-node/bin/jasmine-node', [spec]);
 });
 
 gulp.task('spec', (callback) => {
-  exec('npm test', (err, stdout, stderr) => {
+  exec('./node_modules/jasmine-node/bin/jasmine-node spec', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     callback(err);
